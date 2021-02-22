@@ -11,7 +11,7 @@ public static int countingValleys(int steps, string path)
             {
                 stepsD++;
             }
-            else if(charPath[i].Equals('D'))
+            else
             {
                 stepsD--;
             }
