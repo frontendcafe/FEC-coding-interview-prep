@@ -12,7 +12,7 @@ fun countingValleys(steps: Int, path: String): Int {
                 85 -> {
                     mutableCount += 1
                     if (count == 0) {
-                        valleys.addAndGet(1)
+                        valleys.getAndIncrement()
                     }
                 }
             }
