@@ -8,8 +8,8 @@ def countingValleys(steps: Int, path: String): Int = {
         b match {
             case 68 => mutableCount -= 1
             case 85 =>
-            mutableCount += 1
-            if (mutableCount == 0) valleys.getAndIncrement
+                mutableCount += 1
+                if (mutableCount == 0) valleys.getAndIncrement
             case _ =>
         }
         mutableCount
