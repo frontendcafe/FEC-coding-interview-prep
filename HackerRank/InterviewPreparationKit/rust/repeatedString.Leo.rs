@@ -1,13 +1,19 @@
 // NOTE: rename the file to repeated_string.rs or main.rs to compile.
 
 fn repeated_string(s: &str, n: i64) -> Option<i64> {
+    // cuento la cantidad de letras 'a' dentro del string
     let mut count: i64 = s
         .chars()
         .filter(|&c| c == 'a')
         .count() as i64;
 
+    // divido la cantidad `n` por el tamaño del string `s`
+    // para obtener un número entero y lo multiplico por
+    // la cantidad de letras `a` contadas en `count`
     count *= n / s.len() as i64;
 
+    // si el resto de la división entre `n` y el tamaño de `s`
+    // no es 0, itero para contar lo que falta
     for i in 0..(n as usize % s.len()) {
         if Some('a') == s.chars().nth(i) {
             count += 1;
