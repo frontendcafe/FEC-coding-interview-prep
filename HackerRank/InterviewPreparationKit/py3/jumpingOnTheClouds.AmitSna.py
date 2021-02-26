@@ -1,4 +1,4 @@
-def jumpingOnClouds(c):
+def jumpingOnTheClouds(c):
     jumps, position = 0, 0
     
     while position < len(c) - 1:
