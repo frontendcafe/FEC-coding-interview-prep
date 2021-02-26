@@ -6,16 +6,16 @@ fn jumping_on_cloud(clouds: &[i32]) -> Option<i32> {
 
     while i < clouds.len() - 1 {
         i = match clouds[i] {
-            0 => {
+            0 = {
                 count += 1;
 
-                if i + 2 < clouds.len() {
+                if i + 2
                     i + 2
                 } else {
                     i + 1
                 }
             }
-            1 => i - 1,
+            1 = i - 1,
             _ => return None,
         };
     }
