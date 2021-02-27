@@ -14,7 +14,7 @@ E.g.:
 ├── HackerRank
 │	├──  InterviewPreparationKit
 │	│	│	├── js
-│	│	│	│   └── WarmUp
+│	│	│	│   └── Warm-up
 │	│	│	│         └── salesByMatch.UserName.js
 │	│	│	└── py3
 
@@ -38,7 +38,7 @@ Ejemplo:
 ├── HackerRank
 │	├──  InterviewPreparationKit
 │	│	│	├── js
-│	│	│	│   └── WarmUp
+│	│	│	│   └── Warm-up
 │	│	│	│         └── salesByMatch.UserName.js
 │	│	│	└── py3
 
