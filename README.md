@@ -13,10 +13,10 @@ E.g.:
 /
 ├── HackerRank
 │	├──  InterviewPreparationKit
-│	│	│	├── js
-│	│	│	│   └── Warm-up
-│	│	│	│         └── salesByMatch.UserName.js
-│	│	│	└── py3
+│	│		├── js
+│	│		│   └── Warm-up
+│	│		│         └── salesByMatch.UserName.js
+│	│		└── py3
 
 ```
 
@@ -37,9 +37,9 @@ Ejemplo:
 /
 ├── HackerRank
 │	├──  InterviewPreparationKit
-│	│	│	├── js
-│	│	│	│   └── Warm-up
-│	│	│	│         └── salesByMatch.UserName.js
-│	│	│	└── py3
+│	│		├── js
+│	│		│   └── Warm-up
+│	│		│         └── salesByMatch.UserName.js
+│	│		└── py3
 
 ```
