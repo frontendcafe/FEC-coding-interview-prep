@@ -11,12 +11,15 @@ func countingValleys(steps int32, path string) int32 {
 	var count int32 = 0
 	level := 0
 	for _, p := range path {
+		// al momento de cruzar por 0, viniendo de un
+		// valor negativo, incremento el contador
 		if level == -1 && p == 'U' {
 			count += 1
 		}
 		if p == 'U' {
 			level += 1
-		} else {
+		}
+		if p == 'D' {
 			level -= 1
 		}
 	}
