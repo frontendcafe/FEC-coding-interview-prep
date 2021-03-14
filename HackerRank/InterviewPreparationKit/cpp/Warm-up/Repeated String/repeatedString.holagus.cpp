@@ -62,19 +62,24 @@ template<class H, class... T> void rd(H& h, T&... t) {
 
 const char nl = '\n';
 const int MOD = (int)1e9 + 7;
-const int mxn = 100;
+const int mxs = 100+1;
 
 void solve(){
-    int n; cin >> n;
-    map <int, int> b;
-    ll ans = 0;
+    ll n; string s;
+    cin >> s >> n;
 
-    for (int i = 0; i < n; ++i) {
-        int k; cin >> k;
-        b[k]++;
-        if (b[k] % 2 == 0) ans++;
-    }
-    
+    int c[mxs];
+    c[0] = (s[0] == 'a');
+
+    for (int i = 1; i < s.length(); ++i)
+        c[i] = c[i - 1] + (s[i] == 'a');
+
+    ll nrem = n % s.length();
+    ll nint = n/s.length();
+
+    ll ans = nint * c[s.length() - 1];
+    if (nrem > 0) ans += c[nrem-1];
+
     cout << ans << endl;
 }
 
@@ -83,5 +88,6 @@ int main()
     ios::sync_with_stdio(0);
     cin.tie(0);
     solve();
+    
     return 0;
 }

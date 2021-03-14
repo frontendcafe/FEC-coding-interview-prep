@@ -62,25 +62,29 @@ template<class H, class... T> void rd(H& h, T&... t) {
 
 const char nl = '\n';
 const int MOD = (int)1e9 + 7;
-const int mxs = 100+1;
+const int mxn = 100;
 
 void solve(){
-    ll n; string s;
-    cin >> s >> n;
+    int n; cin >> n;
 
-    int c[mxs];
-    c[0] = (s[0] == 'a');
+    vi a(n);
+    for (int i = 0; i < n; ++i) {
+        cin >> a[i];
+    }
+    
+    vi d(n, INF);
 
-    for (int i = 1; i < s.length(); ++i)
-        c[i] = c[i - 1] + (s[i] == 'a');
-
-    ll nrem = n % s.length();
-    ll nint = n/s.length();
-
-    ll ans = nint * c[s.length() - 1];
-    if (nrem > 0) ans += c[nrem-1];
-
-    cout << ans << endl;
+    d[n - 1] = 0;
+    for (int i = n-1; i>=1; --i) {
+        if (a[i - 1] != 1) {
+            d[i - 1] = min(d[i - 1], d[i] + 1);
+        }
+        if (i-2 >= 0 && a[i - 2] != 1) {
+            d[i - 2] = min(d[i - 2], d[i] + 1);
+        }
+    }
+    
+    cout << d[0] << endl;
 }
 
 int main()

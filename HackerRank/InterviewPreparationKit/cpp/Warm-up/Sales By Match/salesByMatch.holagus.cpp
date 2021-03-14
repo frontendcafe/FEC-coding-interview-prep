@@ -66,25 +66,16 @@ const int mxn = 100;
 
 void solve(){
     int n; cin >> n;
+    map <int, int> b;
+    ll ans = 0;
 
-    vi a(n);
     for (int i = 0; i < n; ++i) {
-        cin >> a[i];
+        int k; cin >> k;
+        b[k]++;
+        if (b[k] % 2 == 0) ans++;
     }
     
-    vi d(n, INF);
-
-    d[n - 1] = 0;
-    for (int i = n-1; i>=1; --i) {
-        if (a[i - 1] != 1) {
-            d[i - 1] = min(d[i - 1], d[i] + 1);
-        }
-        if (i-2 >= 0 && a[i - 2] != 1) {
-            d[i - 2] = min(d[i - 2], d[i] + 1);
-        }
-    }
-    
-    cout << d[0] << endl;
+    cout << ans << endl;
 }
 
 int main()
@@ -92,6 +83,5 @@ int main()
     ios::sync_with_stdio(0);
     cin.tie(0);
     solve();
-    
     return 0;
 }
