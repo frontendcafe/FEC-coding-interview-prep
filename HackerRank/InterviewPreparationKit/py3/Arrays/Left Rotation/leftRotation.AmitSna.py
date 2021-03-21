@@ -1,2 +1,1 @@
-def rotLeft(a, d):
-    return a[d-len(a):] + a[:d]
+rotLeft = lambda a, d: a[d - len(a):] + a[:d]
