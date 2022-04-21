@@ -15,5 +15,3 @@ const compareTriplets = (a: number[], b: number[]): number[] => {
 
   return [alicia, bob];
 };
-
-export default compareTriplets;
